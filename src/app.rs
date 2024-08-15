@@ -36,7 +36,7 @@ impl App{
     self.currently_editing = None;
   }
 
-  pub fn toffle_editing(&mut self) {
+  pub fn toggle_editing(&mut self) {
     if let Some(edit_mode) = &self.currently_editing {
       match edit_mode {
         curentlyEditing::Key => self.currently_editing = Some(CurrentlyEditing::Value),
