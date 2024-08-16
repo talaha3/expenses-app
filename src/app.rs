@@ -1,3 +1,5 @@
+// Controls app state
+
 use std::collections::HashMap;
 
 pub enum CurrentScreen {
