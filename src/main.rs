@@ -104,9 +104,11 @@ fn main() -> Result<(), Box<dyn Error>> {
     let backend = CrosstermBackend::new(stderr);
     let mut terminal = Terminal::new(backend)?;
 
+    // create app and run it
     let mut app = App::new();
     let res = run_app(&mut terminal, &mut app);
 
+    // restore terminal
     disable_raw_mode()?;
     execute!(
         terminal.backend_mut(),
